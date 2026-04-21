@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My E-Commerce Site</title>
+    <link rel="stylesheet" href="e-commerce.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="logo" style="font-size: 32px">
+          My <span style="color: red">E-Commerce</span>
+        </div>
+
+        <div class="nav-links">
+          <button id="authBtn">Login</button>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#" id="cartBtn">Cart (<span id="cart-count">0</span>)</a>
+          <input type="text" id="searchInput" placeholder="Search products...">
+        </div>
+      </nav>
+
+<div class="auth-modal" id="authModal">
+  <div class="auth-box">
+
+    <h3 id="authTitle">Login</h3>
+
+    <input type="text" id="authName" placeholder="Name" style="display:none;">
+    <input type="email" id="authEmail" placeholder="Email">
+    <input type="password" id="authPass" placeholder="Password">
+
+    <button id="authSubmit">Submit</button>
+
+    <p id="toggleAuth">
+      Don't have an account? <span>Sign Up</span>
+    </p>
+
+    <button id="closeAuth">Close</button>
+
+  </div>
+</div>
+
+      <div class="about" id="about">
+        <hr />
+        <div class="about-content">
+          <h3>About Us</h3>
+          <p class="about-text">
+            Welcome to our e-commerce website! We are passionate about providing
+            you with a seamless online shopping experience. Our platform offers
+            a wide range of products, from trendy clothing and stylish shoes to
+            elegant watches. We are committed to delivering high-quality items
+            at competitive prices, ensuring that you find exactly what you're
+            looking for. Our user-friendly interface makes browsing and
+            purchasing easy, while our secure payment options give you peace of
+            mind. Thank you for choosing us for your shopping needs!
+          </p>
+          <hr />
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="trending">
+        <div class="trend-wrapper">
+          <div class="trend-image">
+            <img src="new/4.jpg" alt="Trending Product" />
+          </div>
+
+          <div class="trend-content">
+            <p class="trend-sub">Trending Fashion</p>
+            <h2 class="trend-title">New Collection</h2>
+            <p class="trend-desc">Big sale of this week up to 30%</p>
+            <button class="trend-btn"><a href="#SHOP">SHOP NOW</a></button>
+          </div>
+        </div>
+      </section>
+      <!-- CLOTHES -->
+      <section class="products">
+        <h2>Clothes</h2>
+
+        <div class="product-container">
+          <div class="product" data-name="T-Shirt" data-price="500">
+            <img src="clothes/1.jpg" />
+            <h3>T-Shirt</h3>
+            <p>₹500</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Shirt" data-price="800" id="SHOP">
+            <img src="clothes/2.jpg" />
+            <h3>Shirt</h3>
+            <p>₹800</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Jeans" data-price="1200">
+            <img src="clothes/3.jpg" />
+            <h3>Jeans</h3>
+            <p>₹1200</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Jacket" data-price="2000">
+            <img src="clothes/4.jpg" />
+            <h3>Jacket</h3>
+            <p>₹2000</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHOES -->
+      <section class="products">
+        <h2>Shoes</h2>
+        <p>1200</p>
+        <div class="product-container">
+          <div class="product" data-name="Nike Shoes" data-price="2500">
+            <img src="shoes/1.jpg" />
+            <h3>Nike Shoes</h3>
+            <p>₹2500</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Adidas Shoes" data-price="2200">
+            <img src="shoes/2.jpg" />
+            <h3>Adidas Shoes</h3>
+            <p>₹2200</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Puma Shoes" data-price="2000">
+            <img src="shoes/3.jpg" />
+            <h3>Puma Shoes</h3>
+            <p>₹2000</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Reebok Shoes" data-price="1800">
+            <img src="shoes/4.jpg" />
+            <h3>Reebok Shoes</h3>
+            <p>₹1800</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WATCHES -->
+      <section class="products">
+        <h2>Watches</h2>
+        <p>5000</p>
+
+        <div class="product-container">
+          <div class="product" data-name="Rolex" data-price="50000">
+            <img src="watches/1.jpg" />
+            <h3>Rolex Premium</h3>
+            <p>₹50000</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Titan" data-price="5000">
+            <img src="watches/2.jpg" />
+            <h3>Titan Gold</h3>
+            <p>₹5000</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Fastrack" data-price="2500">
+            <img src="watches/3.jpg" />
+            <h3>Fastrack Silver</h3>
+            <p>₹2500</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+
+          <div class="product" data-name="Apple Watch" data-price="30000">
+            <img src="watches/4.jpg" />
+            <h3>Apple Smart Watch</h3>
+            <p>₹30000</p>
+
+            <div class="cart-controls">
+              <button class="decrease">-</button>
+              <span class="qty">0</span>
+              <button class="increase">+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CART -->
+      <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button id="closeCart">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+       <div class="cart-footer">
+  <p>Total: ₹<span id="totalPrice">0</span></p>
+  <button id="checkoutBtn">Checkout</button>
+</div>
+      </div>
+
+      <!-- checkout -->
+       <div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-box">
+    <h3>Order Summary</h3>
+
+    <div id="orderItems"></div>
+
+    <p>Total: ₹<span id="finalTotal"></span></p>
+
+    <input type="text" placeholder="Your Name" id="userName">
+    <input type="text" placeholder="Address" id="userAddress">
+
+    <button id="placeOrder">Place Order</button>
+    <button id="closeCheckout">Cancel</button>
+  </div>
+</div>
+      <!-- TOAST -->
+      <div class="toast" id="toast">Added to cart</div>
+    </main>
+    <br />
+    <footer class="contact" id="contact">
+      <hr />
+      <div class="write">
+        <h3>Write a Review</h3>
+        <p>
+          We value your feedback! Please share your thoughts and experiences
+          with our products. Your reviews help us improve and provide better
+          service to you and other customers. Thank you for taking the time to
+          share your opinion!
+        </p>
+        <div class="form">
+          <form action="">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="text" placeholder="Subject" />
+            <textarea placeholder="Enter your Review here..."></textarea>
+            <button class="send">
+              <i class="fa-solid fa-paper-plane"></i> Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="e-commerce.js"></script>
+  </body>
+</html>
